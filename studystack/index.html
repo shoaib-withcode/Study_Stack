@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>StudyStack - Know what to learn next</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>STUDYSTACK</h1>
+    <p>Know what to learn next. Know when you will finish.</p>
+  </div>
+  <button id="reset" class="btn pink" type="button">Reset progress</button>
+</header>
+
+<main>
+  <section class="card yellow">
+    <h2>1. Choose your target role</h2>
+    <div id="roles" class="chips"></div>
+    <label class="hours">Hours you can study per week
+      <input id="hours" type="number" min="1" max="80" value="10">
+    </label>
+    <div id="role-info" class="role-info"></div>
+  </section>
+
+  <div class="cols">
+    <section class="card">
+      <h2>2. Tick the skills you already know</h2>
+      <div id="skills"></div>
+    </section>
+    <div class="stack">
+      <section class="card blue">
+        <h2>3. Your gap</h2>
+        <div id="score"></div>
+      </section>
+      <section class="card green">
+        <h2>How to learn each skill</h2>
+        <ol id="method"></ol>
+      </section>
+    </div>
+  </div>
+
+  <section class="card">
+    <h2>4. Your weekly plan</h2>
+    <p class="hint">Open a skill to see where to learn it, how to learn it and what to build.</p>
+    <div id="plan"></div>
+  </section>
+</main>
+
+<footer>Progress is saved in this browser only (localStorage). Hours are estimates, not market data.</footer>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/planner.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
